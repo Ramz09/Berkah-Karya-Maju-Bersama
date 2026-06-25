@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Adiwilaga Agung — Solusi Industri & Konstruksi Profesional</title>
+  <meta name="description" content="PT Adiwilaga Agung, unit bisnis CV Berkah Kreasi Maju Bersama — mitra strategis untuk pengadaan, konstruksi, dan pemeliharaan industri di Indonesia.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              50: '#eef3f8', 100: '#d5e1ed', 200: '#abc3db', 300: '#81a5c9', 400: '#5787b7',
+              500: '#2d69a5', 600: '#0d2b45', 700: '#0a2237', 800: '#071929', 900: '#04101b'
+            },
+            accent: {
+              50: '#fdf8f0', 100: '#f9edd9', 200: '#f3dbb3', 300: '#edc98d', 400: '#e7b767',
+              500: '#d4a03c', 600: '#b8882a', 700: '#8a661f', 800: '#5c4415', 900: '#2e220a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-rounded { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; user-select: none; }
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .text-gradient { background: linear-gradient(135deg, #0d2b45 0%, #2d69a5 50%, #5787b7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-lift { transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s cubic-bezier(0.22,1,0.36,1); }
+    .card-lift:hover { transform: translateY(-8px); box-shadow: 0 24px 48px -12px rgba(13,43,69,0.08), 0 8px 24px -8px rgba(13,43,69,0.06); }
+    .btn-shine { position: relative; overflow: hidden; }
+    .btn-shine::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.6s; }
+    .btn-shine:hover::before { left: 100%; }
+    .glass { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .hero-grid { background-image: linear-gradient(rgba(13,43,69,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(13,43,69,0.025) 1px, transparent 1px); background-size: 64px 64px; }
+    .grain::before {
+      content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 256px 256px;
+    }
+    .premium-card {
+      background: #fffefc; border: 1px solid rgba(0,0,0,0.035);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.015), 0 2px 8px rgba(0,0,0,0.02), 0 6px 24px rgba(0,0,0,0.025);
+    }
+    .section-soft { background: linear-gradient(180deg, #fafaf8 0%, #f5f4f1 50%, #fafaf8 100%); }
+  </style>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-[#fafaf8] selection:bg-brand-100 selection:text-brand-700 grain overflow-x-hidden">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="glass bg-white/80 border-b border-transparent transition-all duration-500" id="navContainer">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-[72px]">
+          <a href="#" class="flex items-center gap-3 group" aria-label="Adiwilaga Agung Home">
+            <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center shadow-lg shadow-brand-600/20 group-hover:shadow-brand-600/30 transition-shadow">
+              <span class="material-symbols-rounded text-xl text-white">corporate_fare</span>
+            </div>
+            <div class="leading-tight">
+              <div class="font-extrabold text-lg text-brand-700 tracking-tight">Adiwilaga<span class="text-accent-500">Agung</span></div>
+              <div class="text-[10px] text-gray-400 font-medium tracking-wide uppercase">CV Berkah Kreasi Maju Bersama</div>
+            </div>
+          </a>
+          <nav class="hidden lg:flex items-center gap-1">
+            <a href="#tentang" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-brand-600 rounded-lg hover:bg-brand-50/70 transition-all duration-200">Tentang</a>
+            <a href="#layanan" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-brand-600 rounded-lg hover:bg-brand-50/70 transition-all duration-200">Layanan</a>
+            <a href="#produk" class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-brand-600 rounded-lg hover:bg-brand-50/70 transition-all duration-200">Produk</a>
+            <a href="#kontak" class="ml-4 inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl btn-shine shadow-lg shadow-brand-600/15 transition-all duration-200">
+              <span class="material-symbols-rounded text-base">chat</span> Hubungi Kami
+            </a>
+          </nav>
+          <button id="menuToggle" class="lg:hidden p-2.5 rounded-xl hover:bg-gray-100 transition-colors" aria-label="Menu">
+            <span class="material-symbols-rounded text-2xl text-brand-700" id="menuIcon">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden glass bg-white/95 border-b border-gray-100/60 shadow-xl">
+      <nav class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-1">
+        <a href="#tentang" class="mobile-link px-4 py-3 text-sm font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl transition-all">Tentang Kami</a>
+        <a href="#layanan" class="mobile-link px-4 py-3 text-sm font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl transition-all">Layanan</a>
+        <a href="#produk" class="mobile-link px-4 py-3 text-sm font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl transition-all">Produk</a>
+        <a href="#kontak" class="mobile-link px-4 py-3 text-sm font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50/50 rounded-xl transition-all">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden hero-grid">
+    <div class="absolute top-20 -right-40 w-[600px] h-[600px] bg-brand-100/40 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-40 w-[500px] h-[500px] bg-accent-100/30 rounded-full blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full pt-24 pb-16">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+        <div class="flex flex-col justify-between reveal">
+          <div class="space-y-7">
+          <h1 class="text-[42px] sm:text-5xl lg:text-[56px] font-extrabold leading-[1.08] tracking-tight text-brand-800">
+            Solusi <span class="text-gradient">Industri</span> untuk Pertumbuhan Bisnis Anda
+          </h1>
+          <p class="text-base lg:text-lg text-gray-500 leading-relaxed max-w-lg">
+            Mendorong keunggulan operasional melalui pengadaan terintegrasi, konstruksi, dan layanan pemeliharaan industri — dengan standar profesionalisme tertinggi.
+          </p>
+          <div class="flex flex-wrap gap-3.5">
+            <a href="#layanan" class="inline-flex items-center gap-2.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3.5 rounded-xl btn-shine shadow-lg shadow-brand-600/20 transition-all text-sm">
+              Lihat Layanan Kami <span class="material-symbols-rounded text-lg">arrow_forward</span>
+            </a>
+            <a href="#tentang" class="inline-flex items-center gap-2.5 bg-white hover:bg-gray-50 text-brand-700 font-semibold px-6 py-3.5 rounded-xl border border-gray-200 hover:border-brand-300 shadow-sm transition-all text-sm">
+              Tentang Perusahaan <span class="material-symbols-rounded text-lg">apartment</span>
+            </a>
+          </div>
+          </div>
+          <div class="flex items-center gap-6 pt-4 border-t border-gray-100">
+            <div class="flex items-center gap-2"><span class="material-symbols-rounded text-green-600 text-lg">verified</span><span class="text-xs font-semibold text-gray-600">ISO Certified</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-rounded text-brand-500 text-lg">military_tech</span><span class="text-xs font-semibold text-gray-600">100+ Proyek</span></div>
+            <div class="flex items-center gap-2"><span class="material-symbols-rounded text-accent-500 text-lg">groups</span><span class="text-xs font-semibold text-gray-600">50+ Mitra</span></div>
+          </div>
+        </div>
+        <div class="relative reveal">
+          <div class="aspect-[5/4] rounded-3xl bg-gradient-to-br from-brand-700 via-brand-600 to-brand-500 shadow-2xl shadow-brand-600/25 overflow-hidden flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.08),transparent_60%)]"></div>
+            <span class="material-symbols-rounded text-[160px] text-white/10">engineering</span>
+            <div class="absolute top-6 right-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-4 shadow-xl border border-white/40">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center"><span class="material-symbols-rounded text-green-600">task_alt</span></div>
+                <div><p class="text-xs text-gray-500">Proyek Selesai</p><p class="text-xl font-bold text-brand-700">150+</p></div>
+              </div>
+            </div>
+            <div class="absolute bottom-8 left-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-4 shadow-xl border border-white/40">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-accent-50 flex items-center justify-center"><span class="material-symbols-rounded text-accent-500">star</span></div>
+                <div><p class="text-xs text-gray-500">Rating Klien</p><p class="text-xl font-bold text-brand-700">4.9/5.0</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS ==================== -->
+  <section class="relative -mt-2 pb-14 lg:pb-16">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 reveal">
+        <div class="premium-card rounded-2xl p-6 text-center card-lift">
+          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="150">0</div>
+          <p class="text-xs lg:text-sm text-gray-500 font-medium">Proyek Diselesaikan</p>
+        </div>
+        <div class="premium-card rounded-2xl p-6 text-center card-lift">
+          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="50">0</div>
+          <p class="text-xs lg:text-sm text-gray-500 font-medium">Mitra Bisnis</p>
+        </div>
+        <div class="premium-card rounded-2xl p-6 text-center card-lift">
+          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="14">0</div>
+          <p class="text-xs lg:text-sm text-gray-500 font-medium">Tahun Pengalaman</p>
+        </div>
+        <div class="premium-card rounded-2xl p-6 text-center card-lift">
+          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="6">0</div>
+          <p class="text-xs lg:text-sm text-gray-500 font-medium">Layanan Utama</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TENTANG KAMI ==================== -->
+  <section id="tentang" class="py-14 lg:py-20 section-soft">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-stretch">
+        <div class="space-y-8 reveal">
+          <div>
+            <p class="text-xs font-bold text-brand-500 uppercase tracking-[0.2em] mb-3">Tentang Kami</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-brand-800 leading-[1.15] tracking-tight">
+              Komitmen pada <span class="text-gradient">Keunggulan</span> Profesional
+            </h2>
+          </div>
+          <p class="text-gray-500 leading-relaxed">
+            PT Adiwilaga Agung hadir sebagai mitra strategis bagi berbagai industri di Indonesia. Kami mengedepankan presisi, efisiensi, dan keberlanjutan dalam setiap aspek layanan kami — mulai dari konstruksi hingga manajemen fasilitas modern.
+          </p>
+          <div class="space-y-4">
+            <div class="flex gap-4 p-5 premium-card rounded-2xl card-lift">
+              <div class="w-11 h-11 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-rounded text-brand-600 text-xl">visibility</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-700 mb-1">Visi Kami</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Menjadi perusahaan penyedia layanan industri dan konstruksi terdepan di Indonesia dengan mengedepankan inovasi dan kepercayaan.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-5 premium-card rounded-2xl card-lift">
+              <div class="w-11 h-11 rounded-xl bg-accent-50 flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-rounded text-accent-500 text-xl">rocket_launch</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-brand-700 mb-1">Misi Kami</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Memberikan solusi berkualitas tinggi yang tepat waktu, aman, dan kompetitif secara biaya untuk kepuasan mitra bisnis kami.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative reveal h-full">
+          <div class="grid grid-cols-5 gap-3 sm:gap-4 h-full">
+            <div class="col-span-3 aspect-[4/3] lg:aspect-auto lg:h-full rounded-3xl bg-gradient-to-tl from-brand-700 to-brand-500 overflow-hidden relative shadow-2xl shadow-brand-600/20">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.08),transparent)]"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <p class="text-2xl font-extrabold">14+</p>
+                <p class="text-sm text-white/70">Tahun Berkarya</p>
+              </div>
+            </div>
+            <div class="col-span-2 flex flex-col gap-4">
+              <div class="flex-1 rounded-3xl bg-gradient-to-br from-accent-300 to-accent-500 overflow-hidden shadow-xl shadow-accent-500/20"></div>
+              <div class="flex-1 rounded-3xl bg-brand-50 border border-brand-100 overflow-hidden flex items-center justify-center">
+                <span class="material-symbols-rounded text-5xl text-brand-300">handshake</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -z-10 -bottom-10 -right-10 w-64 h-64 bg-brand-50 rounded-full blur-3xl opacity-60"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LAYANAN ==================== -->
+  <section id="layanan" class="py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12 reveal">
+        <p class="text-xs font-bold text-brand-500 uppercase tracking-[0.2em] mb-3">Layanan Kami</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-brand-800 leading-[1.15] tracking-tight mb-4">
+          Solusi <span class="text-gradient">Spesialis</span> untuk Bisnis Anda
+        </h2>
+        <p class="text-gray-500 leading-relaxed">Solusi end-to-end yang dirancang untuk mendukung infrastruktur dan operasional bisnis Anda secara maksimal.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div class="group premium-card rounded-2xl p-7 card-lift reveal cursor-default">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
+            <span class="material-symbols-rounded text-brand-600 text-2xl">account_balance</span>
+          </div>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Service Alat Kantor & Bank</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Pemeliharaan profesional untuk peralatan perbankan dan infrastruktur kantor modern dengan teknisi bersertifikasi.</p>
+        </div>
+        <div class="group premium-card rounded-2xl p-7 card-lift reveal cursor-default">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
+            <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="5" width="16" height="12" rx="2"/>
+              <line x1="8" y1="2" x2="16" y2="2"/>
+              <line x1="7" y1="9" x2="7" y2="13"/>
+              <line x1="10" y1="9" x2="10" y2="13"/>
+              <line x1="13" y1="9" x2="13" y2="13"/>
+              <line x1="16" y1="9" x2="16" y2="13"/>
+              <path d="M6 17l2 3h8l2-3"/>
+            </svg>
+          </div>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Sewa Mesin Penghancur Kertas</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Penyediaan unit penghancur dokumen berkualitas tinggi untuk kebutuhan kantor harian dengan dukungan teknis penuh.</p>
+        </div>
+        <div class="group premium-card rounded-2xl p-7 card-lift reveal cursor-default">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
+            <span class="material-symbols-rounded text-brand-600 text-2xl">delete_sweep</span>
+          </div>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Peleburan Dokumen</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Layanan on-site & metode pulping (bubur kertas) untuk pemusnahan data sensitif yang aman dan sesuai regulasi.</p>
+        </div>
+        <div class="group premium-card rounded-2xl p-7 card-lift reveal cursor-default">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
+            <span class="material-symbols-rounded text-brand-600 text-2xl">print</span>
+          </div>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Percetakan Umum</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Solusi cetak profesional untuk branding, administrasi, dan kebutuhan promosi bisnis dengan hasil presisi tinggi.</p>
+        </div>
+        <div class="group premium-card rounded-2xl p-7 card-lift reveal cursor-default">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
+            <span class="material-symbols-rounded text-brand-600 text-2xl">inventory</span>
+          </div>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Supply Material Proyek</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Pengadaan material konstruksi dan industri berkualitas dengan rantai pasok terintegrasi dan harga kompetitif.</p>
+        </div>
+        <div class="group premium-card rounded-2xl p-7 card-lift reveal cursor-default">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
+            <span class="material-symbols-rounded text-brand-600 text-2xl">router</span>
+          </div>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Jaringan CCTV & Website</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Instalasi keamanan canggih dan pengembangan platform digital untuk menunjang operasional bisnis modern.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUK ==================== -->
+  <section id="produk" class="py-14 lg:py-20 section-soft">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div class="relative reveal order-2 lg:order-1">
+          <div class="aspect-square rounded-3xl bg-gradient-to-br from-gray-700 via-gray-600 to-brand-800 shadow-2xl shadow-gray-700/20 overflow-hidden flex items-center justify-center relative">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,255,255,0.06),transparent_50%)]"></div>
+            <span class="material-symbols-rounded text-[150px] text-white/10">grid_view</span>
+            <div class="absolute top-6 left-6 bg-white/90 backdrop-blur rounded-xl px-4 py-2.5 shadow-lg border border-white/40">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-rounded text-green-600">verified</span>
+                <span class="text-xs font-bold text-brand-700">Garansi 5 Tahun</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-7 reveal order-1 lg:order-2">
+          <div>
+            <p class="text-xs font-bold text-accent-600 uppercase tracking-[0.2em] mb-3">Produk Unggulan</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-brand-800 leading-[1.15] tracking-tight">
+              Ubin Industri <span class="text-gradient">Heavy-Duty</span>
+            </h2>
+          </div>
+          <p class="text-gray-500 leading-relaxed">
+            Didesain khusus untuk lantai gudang, pabrik, dan area beban tinggi. Tahan lama, anti-slip, dan mudah dirawat — standar baru untuk lantai industri profesional.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3.5 p-4 premium-card rounded-xl">
+              <div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-rounded text-green-600 text-lg">check_circle</span>
+              </div>
+              <div>
+                <p class="font-semibold text-brand-700 text-sm">Tahan Beban Hingga 50 Ton</p>
+                <p class="text-gray-500 text-xs mt-0.5">Dirancang untuk menahan tekanan ekstrem di area industri berat.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3.5 p-4 premium-card rounded-xl">
+              <div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-rounded text-green-600 text-lg">check_circle</span>
+              </div>
+              <div>
+                <p class="font-semibold text-brand-700 text-sm">Lapisan Pelindung Kimia & Oli</p>
+                <p class="text-gray-500 text-xs mt-0.5">Proteksi maksimal terhadap tumpahan bahan kimia dan pelumas industri.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3.5 p-4 premium-card rounded-xl">
+              <div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-rounded text-green-600 text-lg">check_circle</span>
+              </div>
+              <div>
+                <p class="font-semibold text-brand-700 text-sm">Instalasi Cepat oleh Teknisi Ahli</p>
+                <p class="text-gray-500 text-xs mt-0.5">Tim profesional kami siap melakukan pemasangan dengan minimal gangguan operasional.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#kontak" class="inline-flex items-center gap-2.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-7 py-3.5 rounded-xl btn-shine shadow-lg shadow-brand-600/20 transition-all text-sm">
+            Minta Penawaran Harga <span class="material-symbols-rounded text-lg">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY US ==================== -->
+  <section class="py-12 lg:py-16 bg-brand-800 text-white overflow-hidden relative">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.04),transparent_70%)]"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-700/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center mb-10 reveal">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">Mengapa Memilih Kami?</h2>
+        <p class="text-brand-200 max-w-xl mx-auto">Komitmen kami terhadap kualitas, keamanan, dan kepuasan klien menjadikan kami mitra pilihan di industri.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal">
+        <div class="text-center p-6">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-rounded text-white text-2xl">shield</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">Keamanan Terjamin</h3>
+          <p class="text-brand-300 text-sm">Protokol keselamatan ketat di setiap tahap proyek.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-rounded text-white text-2xl">schedule</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">Tepat Waktu</h3>
+          <p class="text-brand-300 text-sm">Komitmen deadline dengan perencanaan yang matang.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-rounded text-white text-2xl">payments</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">Harga Kompetitif</h3>
+          <p class="text-brand-300 text-sm">Nilai terbaik tanpa kompromi pada kualitas.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-rounded text-white text-2xl">support_agent</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">Dukungan 24/7</h3>
+          <p class="text-brand-300 text-sm">Tim support siap membantu kapan pun Anda butuhkan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KONTAK ==================== -->
+  <section id="kontak" class="py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12 reveal">
+        <p class="text-xs font-bold text-brand-500 uppercase tracking-[0.2em] mb-3">Hubungi Kami</p>
+        <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-brand-800 leading-[1.15] tracking-tight mb-4">
+          Mari <span class="text-gradient">Diskusikan</span> Proyek Anda
+        </h2>
+        <p class="text-gray-500 leading-relaxed">Tim ahli kami siap membantu menjawab pertanyaan dan memberikan solusi terbaik untuk kebutuhan bisnis Anda.</p>
+      </div>
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-stretch">
+        <div class="lg:col-span-3 reveal flex flex-col">
+          <form id="contactForm" class="premium-card rounded-3xl p-7 sm:p-9 space-y-6 flex-1" onsubmit="handleSubmit(event)">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="nama" class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap <span class="text-red-500">*</span></label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200/70 text-sm text-gray-700 placeholder-gray-400 bg-[#f8f7f3] focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/10 focus:border-brand-300 transition-all duration-200">
+              </div>
+              <div>
+                <label for="perusahaan" class="block text-sm font-semibold text-gray-700 mb-2">Perusahaan</label>
+                <input type="text" id="perusahaan" name="perusahaan" placeholder="Nama perusahaan Anda"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200/70 text-sm text-gray-700 placeholder-gray-400 bg-[#f8f7f3] focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/10 focus:border-brand-300 transition-all duration-200">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email <span class="text-red-500">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="nama@perusahaan.com"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200/70 text-sm text-gray-700 placeholder-gray-400 bg-[#f8f7f3] focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/10 focus:border-brand-300 transition-all duration-200">
+              </div>
+              <div>
+                <label for="telepon" class="block text-sm font-semibold text-gray-700 mb-2">Nomor Telepon <span class="text-red-500">*</span></label>
+                <input type="tel" id="telepon" name="telepon" required placeholder="+62 812 3456 789"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-200/70 text-sm text-gray-700 placeholder-gray-400 bg-[#f8f7f3] focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/10 focus:border-brand-300 transition-all duration-200">
+              </div>
+            </div>
+            <div>
+              <label for="pilihLayanan" class="block text-sm font-semibold text-gray-700 mb-2">Layanan yang Diminati <span class="text-red-500">*</span></label>
+              <select id="pilihLayanan" name="layanan" required
+                class="w-full px-4 py-3 rounded-xl border border-gray-200/70 text-sm text-gray-700 bg-[#f8f7f3] focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/10 focus:border-brand-300 transition-all duration-200 appearance-none bg-no-repeat bg-[right_1rem_center] bg-[length:1.25rem] pr-12"
+                style="background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23888%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpolyline points=%226 9 12 15 18 9%22%3E%3C/polyline%3E%3C/svg%3E')">
+                <option value="" disabled selected>— Pilih layanan yang Anda butuhkan —</option>
+                <option value="Service Alat Kantor &amp; Bank">🏦 Service Alat Kantor & Bank</option>
+                <option value="Sewa Mesin Penghancur Kertas">🔄 Sewa Mesin Penghancur Kertas</option>
+                <option value="Peleburan Dokumen">🔒 Peleburan Dokumen</option>
+                <option value="Percetakan Umum">🖨️ Percetakan Umum</option>
+                <option value="Supply Material Proyek">📦 Supply Material Proyek</option>
+                <option value="Jaringan CCTV &amp; Website">📡 Jaringan CCTV & Website</option>
+                <option value="Lainnya">💡 Lainnya (sebutkan di pesan)</option>
+              </select>
+            </div>
+            <div>
+              <label for="pesan" class="block text-sm font-semibold text-gray-700 mb-2" required>Pesan / Detail Proyek <span class="text-red-500">*</span></label>
+              <textarea id="pesan" name="pesan" rows="5" placeholder="Ceritakan kebutuhan atau proyek Anda secara singkat..."
+                class="w-full px-4 py-3 rounded-xl border border-gray-200/70 text-sm text-gray-700 placeholder-gray-400 bg-[#f8f7f3] focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/10 focus:border-brand-300 transition-all duration-200 resize-none"></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3.5 rounded-xl btn-shine shadow-lg shadow-green-600/20 transition-all text-sm">
+              <span class="material-symbols-rounded text-lg">chat</span> Kirim via WhatsApp
+            </button>
+            <div id="formSuccess" class="hidden rounded-2xl bg-green-50 border border-green-200 p-5 text-sm">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-rounded text-green-600 text-2xl">check_circle</span>
+                <div>
+                  <p class="font-bold text-green-800">Pesan Terkirim!</p>
+                  <p class="text-green-700 mt-0.5">Tim kami akan menghubungi Anda dalam 1×24 jam kerja.</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="lg:col-span-2 space-y-5 reveal">
+          <div class="group premium-card rounded-2xl p-6 card-lift">
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0 group-hover:bg-red-100 transition-colors">
+                <span class="material-symbols-rounded text-red-500 text-xl">location_on</span>
+              </div>
+              <div>
+                <p class="font-bold text-brand-700 text-sm mb-1">Alamat Kantor</p>
+                <p class="text-gray-500 text-sm leading-relaxed">Jl. Sudirman No. 123<br>Central Business District<br>Jakarta, Indonesia</p>
+              </div>
+            </div>
+          </div>
+          <div class="group premium-card rounded-2xl p-6 card-lift">
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
+                <span class="material-symbols-rounded text-blue-500 text-xl">mail</span>
+              </div>
+              <div>
+                <p class="font-bold text-brand-700 text-sm mb-1">Email</p>
+                <a href="mailto:info@adiwilagaagung.co.id" class="text-sm text-brand-600 hover:text-brand-700 font-medium transition-colors">info@adiwilagaagung.co.id</a>
+              </div>
+            </div>
+          </div>
+          <div class="group premium-card rounded-2xl p-6 card-lift">
+            <div class="flex gap-4">
+              <div class="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center flex-shrink-0 group-hover:bg-green-100 transition-colors">
+                <span class="material-symbols-rounded text-green-500 text-xl">phone_iphone</span>
+              </div>
+              <div>
+                <p class="font-bold text-brand-700 text-sm mb-1">Telepon / WhatsApp</p>
+                <p class="text-gray-500 text-sm">+62 21 555 0123</p>
+                <p class="text-gray-500 text-sm">+62 812 3456 789</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm h-60 bg-gray-100 flex items-center justify-center">
+            <div class="text-center">
+              <span class="material-symbols-rounded text-4xl text-gray-300">map</span>
+              <p class="text-xs text-gray-400 mt-1">Lokasi Kantor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-brand-800 text-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 pb-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+              <span class="material-symbols-rounded text-xl text-accent-400">corporate_fare</span>
+            </div>
+            <span class="font-extrabold text-lg tracking-tight">CV Berkah Kreasi Maju Bersama</span>
+          </div>
+          <div class="space-y-1">
+            <p class="text-accent-400 font-semibold text-sm">Adiwilaga Agung</p>
+            <p class="text-brand-300 text-sm">Unit Bisnis dari CV Berkah Kreasi Maju Bersama</p>
+          </div>
+          <p class="text-brand-300 text-sm leading-relaxed max-w-sm">Penyedia layanan infrastruktur dan industri terpercaya, berdedikasi untuk memberikan keunggulan melalui setiap proyek.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Navigasi</h4>
+          <ul class="space-y-3">
+            <li><a href="#tentang" class="text-brand-300 hover:text-accent-400 text-sm transition-colors duration-200">Tentang Kami</a></li>
+            <li><a href="#layanan" class="text-brand-300 hover:text-accent-400 text-sm transition-colors duration-200">Layanan Utama</a></li>
+            <li><a href="#produk" class="text-brand-300 hover:text-accent-400 text-sm transition-colors duration-200">Produk Industri</a></li>
+            <li><a href="#kontak" class="text-brand-300 hover:text-accent-400 text-sm transition-colors duration-200">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4">
+          <h4 class="font-semibold text-white mb-5 text-sm uppercase tracking-wider">Media Sosial</h4>
+          <div class="flex gap-3 mb-5">
+            <span class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center" aria-label="Website"><span class="material-symbols-rounded text-white text-lg">public</span></span>
+            <span class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center" aria-label="Email"><span class="material-symbols-rounded text-white text-lg">mail</span></span>
+            <span class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center" aria-label="Facebook">
+              <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </span>
+          </div>
+          <p class="text-brand-300 text-sm">Ikuti kami untuk update proyek terbaru dan informasi layanan.</p>
+        </div>
+      </div>
+      <div class="border-t border-brand-700 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-brand-400 text-sm text-center sm:text-left">© 2024 CV Berkah Kreasi Maju Bersama. All Rights Reserved.</p>
+        <p class="text-brand-500 text-xs text-center sm:text-right">PT Adiwilaga Agung — Mitra Bisnis Terpercaya</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WA ==================== -->
+  <a href="https://wa.me/6281292074041?text=Halo!%20Saya%20ingin%20menanyakan%20terkait%20layanan%20dari%20CV%20Berkah%20Karya%20Maju%20Bersama" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-semibold pl-5 pr-6 py-3.5 rounded-full shadow-2xl shadow-green-500/30 transition-all hover:scale-105 active:scale-95 group" aria-label="Chat WhatsApp">
+    <span class="material-symbols-rounded text-xl">chat</span>
+    <span class="text-sm hidden sm:inline">Butuh Bantuan?</span>
+  </a>
+
+  <script>
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.textContent = isOpen ? 'close' : 'menu';
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden'); menuIcon.textContent = 'menu';
+    }));
+
+    // Navbar Shadow
+    const navContainer = document.getElementById('navContainer');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY > 20;
+      navContainer.classList.toggle('shadow-sm', scrolled);
+      navContainer.classList.toggle('border-gray-200/60', scrolled);
+    });
+
+    // Scroll Reveal
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Counter Animation
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const start = performance.now();
+          const duration = 2000;
+          (function animate(now) {
+            const p = Math.min((now - start) / duration, 1);
+            el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target) + (target >= 50 ? '+' : '');
+            if (p < 1) requestAnimationFrame(animate);
+          })(start);
+          countObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(el => countObs.observe(el));
+
+    // Form Handler — Open WhatsApp with formatted message
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const nama = document.getElementById('nama').value.trim();
+      const perusahaan = document.getElementById('perusahaan').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telepon = document.getElementById('telepon').value.trim();
+      const layanan = document.getElementById('pilihLayanan').value;
+      const pesan = document.getElementById('pesan').value.trim();
+
+      let message = `Halo CV Berkah Kreasi Maju Bersama,\n\n`
+        + `Saya ingin menghubungi Anda terkait pertanyaan tentang layanan yang tersedia. Perkenalkan diri saya:\n\n`
+        + `Nama: ${nama}\n`
+        + (perusahaan ? `Perusahaan: ${perusahaan}\n` : '')
+        + `Email: ${email}\n`
+        + `Telepon: ${telepon}\n`
+        + `Layanan: ${layanan}\n`
+        + (pesan ? `\nPesan:\n${pesan}` : '');
+
+      window.open(`https://wa.me/6281292074041?text=${encodeURIComponent(message)}`, '_blank');
+      form.reset();
+    }
+  </script>
+</body>
+</html>
