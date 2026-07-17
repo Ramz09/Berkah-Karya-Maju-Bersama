@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percetakan Umum — CV Berkah Kreasi Maju Bersama</title>
+  <meta name="description" content="Layanan percetakan umum profesional — cetak brosur, kalender, nota, kartu nama, paper bag, company profile, dan berbagai kebutuhan cetak bisnis dengan kualitas premium.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#eef3f8',100:'#d5e1ed',200:'#abc3db',300:'#81a5c9',400:'#5787b7',500:'#2d69a5',600:'#0d2b45',700:'#0a2237',800:'#071929',900:'#04101b' },
+            accent: { 50:'#fdf8f0',100:'#f9edd9',200:'#f3dbb3',300:'#edc98d',400:'#e7b767',500:'#d4a03c',600:'#b8882a',700:'#8a661f',800:'#5c4415',900:'#2e220a' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-rounded { font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24; user-select:none; }
+  </style>
+</head>
+<body class="font-sans text-gray-700 bg-white">
+
+  <!-- ===== TOP BAR ===== -->
+  <header class="border-b border-gray-100 bg-white sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 text-brand-700 font-bold text-sm hover:text-brand-600 transition-colors">
+        <span class="material-symbols-rounded text-lg">arrow_back</span> Kembali
+      </a>
+      <span class="text-xs text-gray-400 font-medium">CV Berkah Kreasi Maju Bersama</span>
+    </div>
+  </header>
+
+  <!-- ===== JUDUL + PENJELASAN SINGKAT ===== -->
+  <section class="max-w-6xl mx-auto px-5 pt-10 pb-6">
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-800 tracking-tight leading-tight">
+      Percetakan Umum
+    </h1>
+    <p class="text-gray-500 mt-3 max-w-2xl leading-relaxed text-sm sm:text-base">
+      Solusi cetak profesional untuk kebutuhan branding, administrasi, dan promosi bisnis Anda. Kami menyediakan layanan <strong class="text-brand-700">cetak offset & digital printing</strong> dengan pilihan bahan kertas premium, finishing eksklusif, dan hasil presisi tinggi — didukung mesin cetak modern dan tim desain berpengalaman.
+    </p>
+    <div class="flex flex-wrap gap-5 mt-5 text-xs sm:text-sm text-gray-500 font-medium">
+      <span class="flex items-center gap-1.5"><span class="material-symbols-rounded text-green-600 text-base">palette</span> Desain Profesional</span>
+      <span class="flex items-center gap-1.5"><span class="material-symbols-rounded text-brand-500 text-base">print</span> Offset & Digital</span>
+      <span class="flex items-center gap-1.5"><span class="material-symbols-rounded text-accent-500 text-base">auto_awesome</span> Finishing Premium</span>
+    </div>
+  </section>
+
+  <!-- ===== SHOWCASE PRODUK ===== -->
+  <section class="max-w-6xl mx-auto px-5 py-8">
+    <h2 class="text-lg font-extrabold text-brand-800 mb-5 flex items-center gap-2">
+      <span class="material-symbols-rounded text-accent-500">photo_library</span> Showcase Produk
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+      <!-- Brosur & Flyer -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/percetakan/brosur.jpg" alt="Cetak Brosur & Flyer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Brosur & Flyer</p>
+        </div>
+      </div>
+      <!-- Kartu Nama -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/percetakan/kartu nama.jpg" alt="Cetak Kartu Nama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Kartu Nama Premium</p>
+        </div>
+      </div>
+      <!-- Kalender -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=600&q=80" alt="Cetak Kalender" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Kalender Custom</p>
+        </div>
+      </div>
+      <!-- Paper Bag -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/percetakan/paperbag.jpg" alt="Cetak Paper Bag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Paper Bag & Kemasan</p>
+        </div>
+      </div>
+      <!-- Nota & Faktur -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/percetakan/nota.webp" alt="Cetak Nota & Faktur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Nota & Faktur NCR</p>
+        </div>
+      </div>
+      <!-- Amplop & Kop Surat -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/percetakan/amplop.jpg" alt="Cetak Amplop & Kop Surat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Amplop & Kop Surat</p>
+        </div>
+      </div>
+      <!-- Buku Agenda & Notebook -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600&q=80" alt="Cetak Buku Agenda" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Buku Agenda & Notebook</p>
+        </div>
+      </div>
+      <!-- Stiker & Label -->
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/percetakan/label%20produk.avif" alt="Cetak Stiker & Label" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Stiker & Label Produk</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LINGKUP LAYANAN ===== -->
+  <section class="max-w-6xl mx-auto px-5 py-8 border-t border-gray-100">
+    <h2 class="text-lg font-extrabold text-brand-800 mb-5 flex items-center gap-2">
+      <span class="material-symbols-rounded text-brand-500">checklist</span> Cakupan Layanan Cetak
+    </h2>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <div class="flex gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50/50">
+        <span class="material-symbols-rounded text-brand-600 text-xl mt-0.5">description</span>
+        <div>
+          <p class="font-bold text-brand-700 text-sm">Material Promosi</p>
+          <p class="text-gray-500 text-xs mt-0.5">Brosur, flyer, leaflet, poster, katalog produk, dan company profile — dengan pilihan kertas art paper, art carton, atau HVS.</p>
+        </div>
+      </div>
+      <div class="flex gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50/50">
+        <span class="material-symbols-rounded text-brand-600 text-xl mt-0.5">inventory_2</span>
+        <div>
+          <p class="font-bold text-brand-700 text-sm">Kemasan & Branding</p>
+          <p class="text-gray-500 text-xs mt-0.5">Paper bag, box kemasan, hang tag, label produk, sleeve — material ivory, kraft, atau art carton dengan finishing laminasi, spot UV, atau poly emas.</p>
+        </div>
+      </div>
+      <div class="flex gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50/50">
+        <span class="material-symbols-rounded text-brand-600 text-xl mt-0.5">edit_note</span>
+        <div>
+          <p class="font-bold text-brand-700 text-sm">Administrasi Bisnis</p>
+          <p class="text-gray-500 text-xs mt-0.5">Kop surat, amplop custom, nota NCR 2-5 ply, faktur, invoice book, map folder, dan formulir perusahaan.</p>
+        </div>
+      </div>
+      <div class="flex gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50/50">
+        <span class="material-symbols-rounded text-accent-500 text-xl mt-0.5">calendar_month</span>
+        <div>
+          <p class="font-bold text-brand-700 text-sm">Souvenir & Corporate Gift</p>
+          <p class="text-gray-500 text-xs mt-0.5">Kalender dinding & meja, buku agenda, notebook custom, sticky notes, dan sertifikat — ideal untuk branding akhir tahun.</p>
+        </div>
+      </div>
+      <div class="flex gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50/50">
+        <span class="material-symbols-rounded text-brand-600 text-xl mt-0.5">badge</span>
+        <div>
+          <p class="font-bold text-brand-700 text-sm">Kebutuhan Event</p>
+          <p class="text-gray-500 text-xs mt-0.5">ID card, lanyard, tiket, booklet, spanduk, roll banner, dan materi presentasi — produksi cepat untuk deadline ketat.</p>
+        </div>
+      </div>
+      <div class="flex gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50/50">
+        <span class="material-symbols-rounded text-accent-500 text-xl mt-0.5">style</span>
+        <div>
+          <p class="font-bold text-brand-700 text-sm">Finishing Eksklusif</p>
+          <p class="text-gray-500 text-xs mt-0.5">Laminasi doff/glossy, spot UV, hot print emas/perak, emboss, deboss, die cut, jilid spiral, perfect binding, dan hard cover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPSI CETAK ===== -->
+  <section class="max-w-6xl mx-auto px-5 py-8 border-t border-gray-100">
+    <h2 class="text-lg font-extrabold text-brand-800 mb-5 flex items-center gap-2">
+      <span class="material-symbols-rounded text-brand-500">settings</span> Opsi Cetak & Material
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="premium-card p-5 rounded-xl border border-gray-100 bg-white text-center">
+        <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-3">
+          <span class="material-symbols-rounded text-brand-600 text-lg">layers</span>
+        </div>
+        <p class="font-bold text-brand-700 text-sm mb-1">Jenis Kertas</p>
+        <p class="text-gray-500 text-xs leading-relaxed">Art Paper 120-150g, Art Carton 210-310g, Ivory, Kraft, HVS, Bookpaper, Fancy Paper</p>
+      </div>
+      <div class="premium-card p-5 rounded-xl border border-gray-100 bg-white text-center">
+        <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-3">
+          <span class="material-symbols-rounded text-brand-600 text-lg">print</span>
+        </div>
+        <p class="font-bold text-brand-700 text-sm mb-1">Metode Cetak</p>
+        <p class="text-gray-500 text-xs leading-relaxed">Offset printing untuk partai besar (ekonomis), digital printing untuk jumlah kecil & kebutuhan cepat</p>
+      </div>
+      <div class="premium-card p-5 rounded-xl border border-gray-100 bg-white text-center">
+        <div class="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-3">
+          <span class="material-symbols-rounded text-brand-600 text-lg">auto_awesome</span>
+        </div>
+        <p class="font-bold text-brand-700 text-sm mb-1">Finishing</p>
+        <p class="text-gray-500 text-xs leading-relaxed">Laminasi, spot UV, hot print, emboss/deboss, die cut, jilid spiral, perfect binding, hard cover</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="max-w-6xl mx-auto px-5 py-10 text-center">
+    <div class="bg-brand-800 rounded-2xl p-8 sm:p-10 text-white">
+      <h2 class="text-xl sm:text-2xl font-extrabold mb-2">Butuh Jasa Cetak Berkualitas?</h2>
+      <p class="text-brand-300 text-sm mb-6 max-w-md mx-auto">Konsultasikan kebutuhan cetak Anda — kami siap membantu dari desain hingga pengiriman dengan hasil profesional dan harga kompetitif.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="https://wa.me/6281292074041?text=Halo!%20Saya%20ingin%20konsultasi%20terkait%20layanan%20percetakan%20umum" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl transition-all text-sm shadow-lg shadow-green-500/25">
+          WhatsApp Kami
+        </a>
+        <a href="index.html#kontak" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-xl transition-all text-sm border border-white/20">
+          <span class="material-symbols-rounded text-lg">mail</span> Form Kontak
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER MINI ===== -->
+  <footer class="border-t border-gray-100 py-6 text-center">
+    <p class="text-xs text-gray-400">© 2024 CV Berkah Kreasi Maju Bersama — <a href="index.html" class="text-brand-500 hover:text-brand-700 transition-colors">Kembali ke Beranda</a></p>
+  </footer>
+
+  <!-- ===== FLOATING WA ===== -->
+  <a href="https://wa.me/6281292074041?text=Halo!%20Saya%20ingin%20konsultasi%20terkait%20layanan%20percetakan%20umum" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 bg-green-500 hover:bg-green-600 text-white font-semibold pl-5 pr-6 py-3 rounded-full shadow-xl shadow-green-500/25 transition-all hover:scale-105 text-sm">
+    <span class="material-symbols-rounded text-lg">chat</span>
+    <span class="hidden sm:inline">Butuh Jasa Cetak?</span>
+  </a>
+
+</body>
+</html>
