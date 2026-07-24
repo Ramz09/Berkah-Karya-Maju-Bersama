@@ -50,6 +50,9 @@
       box-shadow: 0 1px 2px rgba(0,0,0,0.015), 0 2px 8px rgba(0,0,0,0.02), 0 6px 24px rgba(0,0,0,0.025);
     }
     .section-soft { background: linear-gradient(180deg, #fafaf8 0%, #f5f4f1 50%, #fafaf8 100%); }
+    .carousel-slide { transition: opacity 0.8s ease; }
+    .carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); transition: all 0.3s ease; cursor: pointer; }
+    .carousel-dot.active { background: #fff; width: 28px; border-radius: 8px; }
   </style>
 </head>
 <body class="font-sans text-gray-700 antialiased bg-[#fafaf8] selection:bg-brand-100 selection:text-brand-700 grain overflow-x-hidden">
@@ -121,21 +124,102 @@
           </div>
         </div>
         <div class="relative reveal">
-          <div class="aspect-[5/4] rounded-3xl shadow-2xl shadow-brand-600/25 overflow-hidden flex items-center justify-center relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80');">
-            <div class="absolute inset-0 bg-gradient-to-br from-brand-800/70 via-brand-700/60 to-brand-600/50"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.06),transparent_60%)]"></div>
-            <div class="absolute top-6 right-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-4 shadow-xl border border-white/40">
+          <div class="aspect-[5/4] rounded-3xl shadow-2xl shadow-brand-600/25 overflow-hidden relative" id="heroCarousel">
+            <!-- Slide 1: Servis Alat Kantor -->
+            <div class="carousel-slide absolute inset-0 opacity-100" id="hslide0">
+              <img src="media/servis alat kantor dan penghitung uang/servis mesin tik elektronik 2.jpeg" alt="Servis Alat Kantor" class="w-full h-full object-cover" loading="eager">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Servis Alat Kantor & Penghitung Uang</p>
+              </div>
+            </div>
+            <!-- Slide 2: Sewa Mesin Penghancur Kertas -->
+            <div class="carousel-slide absolute inset-0 opacity-0" id="hslide1">
+              <img src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/service%20mesin%20penghancur%20kertas.jpeg" alt="Sewa Penghancur Kertas" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Sewa Mesin Penghancur Kertas</p>
+              </div>
+            </div>
+            <!-- Slide 3: Pemusnahan Dokumen -->
+            <div class="carousel-slide absolute inset-0 opacity-0" id="hslide2">
+              <img src="media/peleburan%20dokumen/peleburan%20dokumen.jpeg" alt="Pemusnahan Dokumen" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Pemusnahan Dokumen</p>
+              </div>
+            </div>
+            <!-- Slide 4: Percetakan Umum -->
+            <div class="carousel-slide absolute inset-0 opacity-0" id="hslide3">
+              <img src="media/percetakan/brosur.jpg" alt="Percetakan Umum" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Percetakan Umum</p>
+              </div>
+            </div>
+            <!-- Slide 5: Supply Material -->
+            <div class="carousel-slide absolute inset-0 opacity-0" id="hslide4">
+              <img src="media/material/batu%20split.jpeg" alt="Supply Material Proyek" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Suplai Material Proyek & ATK</p>
+              </div>
+            </div>
+            <!-- Slide 6: Instalasi CCTV -->
+            <div class="carousel-slide absolute inset-0 opacity-0" id="hslide5">
+              <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80" alt="Instalasi CCTV" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Instalasi Jaringan CCTV</p>
+              </div>
+            </div>
+            <!-- Slide 7: Kontraktor Umum -->
+            <div class="carousel-slide absolute inset-0 opacity-0" id="hslide6">
+              <img src="media/kontraktor%20umum/kontraktor5.jpeg" alt="Kontraktor Umum" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Kontraktor Umum</p>
+              </div>
+            </div>
+            <!-- Slide 8: Pembongkaran Bangunan -->
+            <div class="carousel-slide absolute inset-0 opacity-0" id="hslide7">
+              <img src="media/pembongkaran%20bangunan/bongkar%20rumah%20dan%20bangunan.jpeg" alt="Pembongkaran Bangunan" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-brand-900/80 via-brand-900/30 to-transparent">
+                <p class="text-white font-bold text-sm sm:text-base mb-1">Pembongkaran Bangunan & Gedung</p>
+              </div>
+            </div>
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-br from-brand-800/30 via-brand-700/20 to-brand-600/30 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.04),transparent_60%)] pointer-events-none"></div>
+
+            <!-- Badge Proyek -->
+            <div class="absolute top-6 right-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-4 shadow-xl border border-white/40 z-10">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center"><span class="material-symbols-rounded text-green-600">task_alt</span></div>
                 <div><p class="text-xs text-gray-500">Proyek Selesai</p><p class="text-xl font-bold text-brand-700">150+</p></div>
               </div>
             </div>
-            <div class="absolute bottom-8 left-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-4 shadow-xl border border-white/40">
+            <!-- Badge Rating -->
+            <div class="absolute top-6 left-6 bg-white/95 backdrop-blur rounded-2xl px-5 py-4 shadow-xl border border-white/40 z-10">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-accent-50 flex items-center justify-center"><span class="material-symbols-rounded text-accent-500">star</span></div>
                 <div><p class="text-xs text-gray-500">Rating Klien</p><p class="text-xl font-bold text-brand-700">4.9/5.0</p></div>
               </div>
             </div>
+
+            <!-- Dots Indicator -->
+            <div class="absolute bottom-20 right-6 flex gap-2 z-10" id="carouselDots">
+              <span class="carousel-dot active" data-index="0"></span>
+              <span class="carousel-dot" data-index="1"></span>
+              <span class="carousel-dot" data-index="2"></span>
+              <span class="carousel-dot" data-index="3"></span>
+              <span class="carousel-dot" data-index="4"></span>
+              <span class="carousel-dot" data-index="5"></span>
+              <span class="carousel-dot" data-index="6"></span>
+              <span class="carousel-dot" data-index="7"></span>
+            </div>
+
+            <!-- Prev/Next Arrows -->
+            <button id="carouselPrev" class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur flex items-center justify-center transition-colors">
+              <span class="material-symbols-rounded text-white text-lg">chevron_left</span>
+            </button>
+            <button id="carouselNext" class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur flex items-center justify-center transition-colors">
+              <span class="material-symbols-rounded text-white text-lg">chevron_right</span>
+            </button>
           </div>
         </div>
       </div>
@@ -241,7 +325,7 @@
           <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
             <span class="material-symbols-rounded text-brand-600 text-2xl">account_balance</span>
           </div>
-          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Service Alat Kantor & Penghitung Uang</h3>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Servis Alat Kantor & Penghitung Uang</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Pemeliharaan profesional untuk peralatan perbankan dan infrastruktur kantor modern dengan teknisi bersertifikasi.</p>
           <a href="service-alat-kantor-dan-penghitung-uang.html" class="inline-flex items-center gap-1.5 mt-auto pt-5 text-xs font-semibold text-brand-500 hover:text-brand-700 transition-colors group/btn">
             Lihat Lebih Lengkap
@@ -293,7 +377,7 @@
           <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-5 group-hover:bg-brand-100 transition-colors duration-300">
             <span class="material-symbols-rounded text-brand-600 text-2xl">inventory</span>
           </div>
-          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Supply Material Proyek & Alat Tulis Kantor</h3>
+          <h3 class="font-bold text-brand-700 mb-2.5 text-base">Suplai Material Proyek & Alat Tulis Kantor</h3>
           <p class="text-gray-500 text-sm leading-relaxed">Pengadaan material konstruksi, industri, dan perlengkapan alat tulis kantor (ATK) berkualitas dengan rantai pasok terintegrasi dan harga kompetitif.</p>
           <a href="supply-material-proyek.html" class="inline-flex items-center gap-1.5 mt-auto pt-5 text-xs font-semibold text-brand-500 hover:text-brand-700 transition-colors group/btn">
             Lihat Lebih Lengkap
@@ -695,6 +779,74 @@
       window.open(`https://wa.me/6281292074041?text=${encodeURIComponent(message)}`, '_blank');
       form.reset();
     }
+
+    // ===== HERO CAROUSEL =====
+    (function() {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('#carouselDots .carousel-dot');
+      const prevBtn = document.getElementById('carouselPrev');
+      const nextBtn = document.getElementById('carouselNext');
+      const totalSlides = slides.length;
+      let current = 0;
+      let interval;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      function goTo(index) {
+        slides.forEach(s => s.classList.add('opacity-0'));
+        slides.forEach(s => s.classList.remove('opacity-100'));
+        slides[index].classList.remove('opacity-0');
+        slides[index].classList.add('opacity-100');
+        dots.forEach(d => d.classList.remove('active'));
+        dots[index].classList.add('active');
+        current = index;
+      }
+
+      function next() { goTo((current + 1) % totalSlides); }
+      function prev() { goTo((current - 1 + totalSlides) % totalSlides); }
+
+      function startAuto() {
+        stopAuto();
+        interval = setInterval(next, 3000);
+      }
+
+      function stopAuto() {
+        if (interval) clearInterval(interval);
+      }
+
+      // Auto-start
+      startAuto();
+
+      // Pause on hover
+      const carousel = document.getElementById('heroCarousel');
+      carousel.addEventListener('mouseenter', stopAuto);
+      carousel.addEventListener('mouseleave', startAuto);
+
+      // Arrows
+      prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); startAuto(); });
+      nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); startAuto(); });
+
+      // Dots
+      dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goTo(parseInt(dot.dataset.index));
+          startAuto();
+        });
+      });
+
+      // Swipe
+      carousel.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) next();
+          else prev();
+          startAuto();
+        }
+      });
+    })();
   </script>
 </body>
 </html>

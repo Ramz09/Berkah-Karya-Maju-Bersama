@@ -33,7 +33,7 @@
   <!-- ===== TOP BAR ===== -->
   <header class="border-b border-gray-100 bg-white sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5 text-brand-700 font-bold text-sm hover:text-brand-600 transition-colors">
+      <a href="index.html" onclick="if(history.length>1){history.back();return false}" class="flex items-center gap-2.5 text-brand-700 font-bold text-sm hover:text-brand-600 transition-colors">
         <span class="material-symbols-rounded text-lg">arrow_back</span> Kembali
       </a>
       <span class="text-xs text-gray-400 font-medium">CV Berkah Kreasi Maju Bersama</span>
@@ -68,9 +68,9 @@
         </div>
       </div>
       <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Renovasi Rumah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <img src="media/kontraktor%20umum/renovasi.jpeg" alt="Renovasi Rumah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
         <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-          <p class="text-white font-semibold text-xs sm:text-sm">Renovasi Rumah Tinggal</p>
+          <p class="text-white font-semibold text-xs sm:text-sm">Renovasi Rumah Tinggal & Gedung</p>
         </div>
       </div>
       <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
@@ -141,13 +141,13 @@
     <!-- Video Player Container -->
     <div class="relative rounded-xl overflow-hidden bg-black shadow-lg">
       <div class="video-slide" id="video0">
-        <video class="w-full aspect-video" controls controlsList="nodownload" poster="media/kontraktor%20umum/kontraktor1.jpeg" preload="metadata">
+        <video class="w-full aspect-video" controls controlsList="nodownload" preload="metadata">
           <source src="media/kontraktor%20umum/videokontraktor1.mp4" type="video/mp4">
           Browser Anda tidak mendukung pemutaran video.
         </video>
       </div>
       <div class="video-slide hidden" id="video1">
-        <video class="w-full aspect-video" controls controlsList="nodownload" poster="media/kontraktor%20umum/kontraktor2.jpeg" preload="metadata">
+        <video class="w-full aspect-video" controls controlsList="nodownload" preload="metadata">
           <source src="media/kontraktor%20umum/videokontraktor2.mp4" type="video/mp4">
           Browser Anda tidak mendukung pemutaran video.
         </video>

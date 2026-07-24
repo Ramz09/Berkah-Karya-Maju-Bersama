@@ -24,6 +24,8 @@
   </script>
   <style>
     .material-symbols-rounded { font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24; user-select:none; }
+    .video-slide { transition: opacity 0.4s ease; }
+    .tab-active { border-bottom: 2px solid #0d2b45; color: #0d2b45; font-weight: 700; }
   </style>
 </head>
 <body class="font-sans text-gray-700 bg-white">
@@ -31,7 +33,7 @@
   <!-- ===== TOP BAR ===== -->
   <header class="border-b border-gray-100 bg-white sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5 text-brand-700 font-bold text-sm hover:text-brand-600 transition-colors">
+      <a href="index.html" onclick="if(history.length>1){history.back();return false}" class="flex items-center gap-2.5 text-brand-700 font-bold text-sm hover:text-brand-600 transition-colors">
         <span class="material-symbols-rounded text-lg">arrow_back</span> Kembali
       </a>
       <span class="text-xs text-gray-400 font-medium">CV Berkah Kreasi Maju Bersama</span>
@@ -89,33 +91,114 @@
           <p class="text-white font-semibold text-xs sm:text-sm">Servis &amp; Sewa Mesin Penghancur Kertas</p>
         </div>
       </div>
-      <!-- CTA Card -->
-      <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-brand-50 border-2 border-dashed border-brand-200 flex items-center justify-center group hover:bg-brand-100 transition-colors">
-        <div class="text-center p-4">
-          <span class="material-symbols-rounded text-brand-400 text-3xl mb-2 block">handyman</span>
-          <p class="text-brand-700 font-bold text-sm mb-1">Butuh Servis?</p>
-          <a href="index.html#kontak" class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-800 text-xs font-semibold transition-colors">
-            Hubungi Kami <span class="material-symbols-rounded text-xs">arrow_forward</span>
-          </a>
+    </div>
+  </section>
+
+  <!-- ===== DOKUMENTASI FOTO ===== -->
+  <section class="max-w-6xl mx-auto px-5 py-8 border-t border-gray-100">
+    <h2 class="text-lg font-extrabold text-brand-800 mb-5 flex items-center gap-2">
+      <span class="material-symbols-rounded text-accent-500">photo_library</span> Dokumentasi
+    </h2>
+
+    <!-- Servis Printer -->
+    <h3 class="text-sm font-bold text-brand-700 mb-3 flex items-center gap-2">
+      <span class="material-symbols-rounded text-brand-500 text-base">build</span> Servis Mesin Printer
+    </h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/servis%20printer%20Olivetti%20PR%202%20Plus.jpeg" alt="Servis Printer Olivetti PR 2 Plus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Servis Printer Olivetti PR 2 Plus</p>
+        </div>
+      </div>
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/servis%20mesin%20printer%20Dot%20Matrix.jpeg" alt="Servis Printer Dot Matrix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Servis Printer Dot Matrix (Epson LX/LQ Series)</p>
+        </div>
+      </div>
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/servisprinter.jpeg" alt="Servis Printer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Servis Printer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Penjualan Printer -->
+    <h3 class="text-sm font-bold text-brand-700 mb-3 flex items-center gap-2">
+      <span class="material-symbols-rounded text-accent-500 text-base">shopping_cart</span> Penjualan Printer
+    </h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+      <div class="group relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+        <img src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/penjualan%20printer%20Olivetti%20PR%202%20Plus.jpeg" alt="Penjualan Printer Olivetti PR 2 Plus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+          <p class="text-white font-semibold text-xs sm:text-sm">Penjualan Printer Olivetti PR 2 Plus</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== DOKUMENTASI VIDEO ===== -->
+  <!-- ===== DOKUMENTASI VIDEO (TAB 4 VIDEO) ===== -->
   <section class="max-w-6xl mx-auto px-5 py-8 border-t border-gray-100">
     <h2 class="text-lg font-extrabold text-brand-800 mb-5 flex items-center gap-2">
-      <span class="material-symbols-rounded text-red-500">play_circle</span> Dokumentasi Proses Servis
+      <span class="material-symbols-rounded text-red-500">play_circle</span> Dokumentasi Video
     </h2>
-    <div class="rounded-xl overflow-hidden bg-black shadow-lg">
-      <video class="w-full aspect-video" controls controlsList="nodownload" poster="media/servis%20alat%20kantor%20dan%20penghitung%20uang/servis%20mesin%20mesin%20penghitung%20uang.jpeg" preload="metadata">
-        <source src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/dokumentasi.mp4" type="video/mp4">
-        Browser Anda tidak mendukung pemutaran video. <a href="media/servis%20alat%20kantor%20dan%20penghitung%20uang/dokumentasi.mp4" class="text-accent-500 underline" download>Unduh video</a>.
-      </video>
+
+    <!-- Video Tabs -->
+    <div class="flex gap-2 mb-4 border-b border-gray-200 overflow-x-auto" id="videoTabs">
+      <button class="tab-active px-4 py-2.5 text-sm transition-colors whitespace-nowrap" data-video="0" onclick="switchVideo(0)">
+        <span class="material-symbols-rounded text-sm align-middle mr-1">play_arrow</span> Penjualan Mesin Hitung Uang 1
+      </button>
+      <button class="px-4 py-2.5 text-sm text-gray-500 hover:text-brand-700 transition-colors whitespace-nowrap" data-video="1" onclick="switchVideo(1)">
+        <span class="material-symbols-rounded text-sm align-middle mr-1">play_arrow</span> Penjualan Mesin Hitung Uang 2
+      </button>
+      <button class="px-4 py-2.5 text-sm text-gray-500 hover:text-brand-700 transition-colors whitespace-nowrap" data-video="2" onclick="switchVideo(2)">
+        <span class="material-symbols-rounded text-sm align-middle mr-1">play_arrow</span> Penjualan Mesin Hitung Uang 3
+      </button>
+      <button class="px-4 py-2.5 text-sm text-gray-500 hover:text-brand-700 transition-colors whitespace-nowrap" data-video="3" onclick="switchVideo(3)">
+        <span class="material-symbols-rounded text-sm align-middle mr-1">build</span> Servis Mesin Hitung Uang
+      </button>
     </div>
-    <p class="text-gray-500 text-sm mt-3 leading-relaxed">
-      Dokumentasi langsung teknisi kami saat melakukan servis untuk mesin penghitung uang.
-    </p>
+
+    <!-- Video Player Container -->
+    <div class="relative rounded-xl overflow-hidden bg-black shadow-lg">
+      <!-- Video 1 -->
+      <div class="video-slide" id="video0">
+        <video class="w-full aspect-video" controls controlsList="nodownload" preload="metadata">
+          <source src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/penjualan%20mesin%20hitung%20uang.mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutaran video.
+        </video>
+      </div>
+      <!-- Video 2 -->
+      <div class="video-slide hidden" id="video1">
+        <video class="w-full aspect-video" controls controlsList="nodownload" preload="metadata">
+          <source src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/penjualan%20mesin%20hitung%20uang%202.mp4%20.mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutaran video.
+        </video>
+      </div>
+      <!-- Video 3 -->
+      <div class="video-slide hidden" id="video2">
+        <video class="w-full aspect-video" controls controlsList="nodownload" preload="metadata">
+          <source src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/penjualan%20mesin%20hitung%20uang%203.mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutaran video.
+        </video>
+      </div>
+      <!-- Video 4 -->
+      <div class="video-slide hidden" id="video3">
+        <video class="w-full aspect-video" controls controlsList="nodownload" preload="metadata">
+          <source src="media/servis%20alat%20kantor%20dan%20penghitung%20uang/servis%20mesin%20hitung%20uang.mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutaran video.
+        </video>
+      </div>
+    </div>
+
+    <!-- Video Info -->
+    <div class="mt-4 flex flex-wrap items-start justify-between gap-4">
+      <p class="text-gray-500 text-sm leading-relaxed max-w-2xl" id="videoDesc">
+        Demo penjualan mesin hitung uang — memperlihatkan performa dan kecepatan mesin dalam menghitung uang kertas berbagai denominasi.
+      </p>
+    </div>
   </section>
 
   <!-- ===== LINGKUP SERVIS ===== -->
@@ -175,6 +258,29 @@
   <footer class="border-t border-gray-100 py-6 text-center">
     <p class="text-xs text-gray-400">© 2024 CV Berkah Kreasi Maju Bersama — <a href="index.html" class="text-brand-500 hover:text-brand-700 transition-colors">Kembali ke Beranda</a></p>
   </footer>
+
+  <!-- ===== VIDEO SWIPE SCRIPT ===== -->
+  <script>
+    function switchVideo(index) {
+      document.querySelectorAll('.video-slide').forEach(v => v.classList.add('hidden'));
+      document.getElementById('video' + index).classList.remove('hidden');
+      document.querySelectorAll('.video-slide video').forEach(v => v.pause());
+      document.querySelectorAll('#videoTabs button').forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('tab-active');
+        } else {
+          btn.classList.remove('tab-active');
+        }
+      });
+      const descs = [
+        'Demo penjualan mesin hitung uang — memperlihatkan performa dan kecepatan mesin dalam menghitung uang kertas berbagai denominasi.',
+        'Demo penjualan mesin hitung uang ke-2 — uji coba mesin dengan berbagai jenis uang kertas untuk memastikan akurasi penghitungan.',
+        'Demo penjualan mesin hitung uang ke-3 — pengecekan fitur deteksi uang palsu dan sensor keaslian pada mesin hitung uang.',
+        'Dokumentasi teknisi kami saat melakukan servis mesin hitung uang — mulai dari diagnosa, pembongkaran, pembersihan, hingga kalibrasi ulang.'
+      ];
+      document.getElementById('videoDesc').textContent = descs[index];
+    }
+  </script>
 
   <!-- ===== FLOATING WA ===== -->
   <a href="https://wa.me/6281292074041?text=Halo!%20Saya%20ingin%20menanyakan%20servis%20alat%20kantor%20dan%20sewa%20mesin%20penghitung%20uang" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 bg-green-500 hover:bg-green-600 text-white font-semibold pl-5 pr-6 py-3 rounded-full shadow-xl shadow-green-500/25 transition-all hover:scale-105 text-sm">
