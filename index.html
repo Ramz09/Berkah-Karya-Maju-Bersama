@@ -94,10 +94,11 @@
   </header>
 
   <!-- ==================== HERO ==================== -->
-  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden hero-grid">
+  <section id="hero" class="relative lg:min-h-screen flex items-start lg:items-center overflow-hidden hero-grid">
     <div class="absolute top-20 -right-40 w-[600px] h-[600px] bg-brand-100/40 rounded-full blur-3xl"></div>
     <div class="absolute -bottom-20 -left-40 w-[500px] h-[500px] bg-accent-100/30 rounded-full blur-3xl"></div>
-    <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full pt-24 pb-16">
+    <div class="absolute inset-x-0 bottom-0 h-20 sm:h-28 bg-gradient-to-b from-transparent to-[#fafaf8] pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full pt-24 pb-8 lg:pb-16">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
         <div class="flex flex-col justify-between reveal">
           <div class="space-y-7">
@@ -213,32 +214,10 @@
     </div>
   </section>
 
-  <!-- ==================== STATS ==================== -->
-  <section class="relative -mt-2 pb-14 lg:pb-16">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 reveal">
-        <div class="premium-card rounded-2xl p-6 text-center card-lift">
-          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="150">0</div>
-          <p class="text-xs lg:text-sm text-gray-500 font-medium">Proyek Diselesaikan</p>
-        </div>
-        <div class="premium-card rounded-2xl p-6 text-center card-lift">
-          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="50">0</div>
-          <p class="text-xs lg:text-sm text-gray-500 font-medium">Mitra Bisnis</p>
-        </div>
-        <div class="premium-card rounded-2xl p-6 text-center card-lift">
-          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="14">0</div>
-          <p class="text-xs lg:text-sm text-gray-500 font-medium">Tahun Pengalaman</p>
-        </div>
-        <div class="premium-card rounded-2xl p-6 text-center card-lift">
-          <div class="text-3xl lg:text-4xl font-extrabold text-brand-700 mb-1 stat-number" data-target="7">0</div>
-          <p class="text-xs lg:text-sm text-gray-500 font-medium">Layanan Utama</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
 <!-- ==================== LAYANAN ==================== -->
-  <section id="layanan" class="py-14 lg:py-20">
+  <section id="layanan" class="pt-8 pb-14 lg:py-20">
     <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
       <div class="flex flex-wrap justify-center gap-5 lg:gap-6">
         <div class="group premium-card rounded-2xl p-7 card-lift reveal cursor-default w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-1rem)] flex flex-col">
@@ -538,9 +517,9 @@
               <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-100 transition-colors">
                 <span class="material-symbols-rounded text-blue-500 text-xl">mail</span>
               </div>
-              <div>
+              <div class="min-w-0 flex-1">
                 <p class="font-bold text-brand-700 text-sm mb-1">Email</p>
-                <a href="mailto:berkahkreasimajubersama@gmail.com " class="text-sm text-brand-600 hover:text-brand-700 font-medium transition-colors">berkahkreasimajubersama@gmail.com</a>
+                <a href="mailto:berkahkreasimajubersama@gmail.com" class="text-sm text-brand-600 hover:text-brand-700 font-medium transition-colors break-all">berkahkreasimajubersama@gmail.com</a>
               </div>
             </div>
           </div>
