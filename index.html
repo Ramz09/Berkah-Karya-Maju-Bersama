@@ -54,6 +54,9 @@
     .carousel-slide { transition: opacity 0.8s ease; }
     .carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.4); transition: all 0.3s ease; cursor: pointer; }
     .carousel-dot.active { background: #fff; width: 28px; border-radius: 8px; }
+    @media (min-width: 1536px) {
+      .max-w-7xl { max-width: 1440px !important; }
+    }
   </style>
 </head>
 <body class="font-sans text-gray-700 antialiased bg-[#fafaf8] selection:bg-brand-100 selection:text-brand-700 grain overflow-x-hidden">
@@ -94,12 +97,12 @@
   </header>
 
   <!-- ==================== HERO ==================== -->
-  <section id="hero" class="relative lg:min-h-screen flex items-start lg:items-center overflow-hidden hero-grid">
+  <section id="hero" class="relative lg:min-h-[min(100vh,760px)] flex items-start lg:items-center overflow-hidden hero-grid">
     <div class="absolute top-20 -right-40 w-[600px] h-[600px] bg-brand-100/40 rounded-full blur-3xl"></div>
     <div class="absolute -bottom-20 -left-40 w-[500px] h-[500px] bg-accent-100/30 rounded-full blur-3xl"></div>
     <div class="absolute inset-x-0 bottom-0 h-20 sm:h-28 bg-gradient-to-b from-transparent to-[#fafaf8] pointer-events-none"></div>
     <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full pt-24 pb-5 lg:pb-2">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 xl:gap-12 items-stretch">
         <div class="flex flex-col justify-between reveal">
           <div class="space-y-7">
           <h1 class="text-[42px] sm:text-5xl lg:text-[56px] font-extrabold leading-[1.08] tracking-tight text-brand-800">
